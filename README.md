@@ -4,6 +4,9 @@
 
 Basic repo demoing a Stark/Snark verifier AVS middleware with full eigenlayer integration. 
 
+This project has been moved to:
+https://github.com/lambdaclass/aligned-layer
+
 
 ## The Project 
 
