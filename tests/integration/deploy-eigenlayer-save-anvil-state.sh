@@ -18,3 +18,12 @@ mv script/output/M2_from_scratch_deployment_data.json.bak script/output/M2_from_
 
 # # kill anvil to save its state
 pkill anvil
+
+# Anvil adds a block state, making the code to fail. We don't care about this, just the accounts and the deployed code
+cd "$parent_path"
+
+jq 'del(.block)' eigenlayer-deployed-anvil-state.json > eigenlayer-deployed-anvil-state-tmp.json
+
+cp -f eigenlayer-deployed-anvil-state-tmp.json eigenlayer-deployed-anvil-state.json
+
+rm eigenlayer-deployed-anvil-state-tmp.json
